@@ -1,6 +1,6 @@
 import React from 'react';
 import Products from '../components/Products';
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet';
 import initialState from '../initialState';
 
 const Home = () => {
@@ -8,17 +8,17 @@ const Home = () => {
     <>
       <Helmet>
         <title> Platzi Conf Merch -Productos</title>
-        <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:site" content="@TU_USER"/>
-        <meta name="twitter:creator" content="@TU_USER"/>
-        <meta name="twitter:title" content="Platzi Conf Store"/>
-        <meta name="twitter:description" content="Platzi Conf Store"/>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@TU_USER" />
+        <meta name="twitter:creator" content="@TU_USER" />
+        <meta name="twitter:title" content="Platzi Conf Store" />
+        <meta name="twitter:description" content="Platzi Conf Store" />
         <meta
           name="twitter:image"
           content="https://s3.amazonaws.com/gndx.dev/gndxdev.png"
         />
-        <meta property="og:title" content="Platzi Conf Store"/>
-        <meta property="og:description" content="Platzi Conf Store"/>
+        <meta property="og:title" content="Platzi Conf Store" />
+        <meta property="og:description" content="Platzi Conf Store" />
         <meta
           property="og:image"
           content="https://s3.amazonaws.com/gndx.dev/gndxdev.png"
@@ -31,11 +31,7 @@ const Home = () => {
       </Helmet>
       <Products products={initialState.products} />;
     </>
-
-
-  )
-  
-  
+  );
 };
 
 export default Home;

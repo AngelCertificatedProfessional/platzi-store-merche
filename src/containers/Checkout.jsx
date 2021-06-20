@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 import '../styles/components/Checkout.css';
 import { handleSumTotal } from '../utils/index';
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet';
 
 const Checkout = () => {
   const { state, removeFromCart } = useContext(AppContext);
@@ -23,17 +23,17 @@ const Checkout = () => {
     <>
       <Helmet>
         <title> Lista de pedidos - Platzi</title>
-        <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:site" content="@TU_USER"/>
-        <meta name="twitter:creator" content="@TU_USER"/>
-        <meta name="twitter:title" content="Platzi Conf Store"/>
-        <meta name="twitter:description" content="Platzi Conf Store"/>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@TU_USER" />
+        <meta name="twitter:creator" content="@TU_USER" />
+        <meta name="twitter:title" content="Platzi Conf Store" />
+        <meta name="twitter:description" content="Platzi Conf Store" />
         <meta
           name="twitter:image"
           content="https://s3.amazonaws.com/gndx.dev/gndxdev.png"
         />
-        <meta property="og:title" content="Platzi Conf Store"/>
-        <meta property="og:description" content="Platzi Conf Store"/>
+        <meta property="og:title" content="Platzi Conf Store" />
+        <meta property="og:description" content="Platzi Conf Store" />
         <meta
           property="og:image"
           content="https://s3.amazonaws.com/gndx.dev/gndxdev.png"
@@ -46,7 +46,11 @@ const Checkout = () => {
       </Helmet>
       <div className="Checkout">
         <div className="Checkout-content">
-          {cart.length > 0 ? <h3> Lista de pedidos: </h3> : <h3> Sin Pedidos</h3>}
+          {cart.length > 0 ? (
+            <h3> Lista de pedidos: </h3>
+          ) : (
+            <h3> Sin Pedidos</h3>
+          )}
           {cart.map((item) => (
             <div className="Checkout-item">
               <div className="Checkout-element">
