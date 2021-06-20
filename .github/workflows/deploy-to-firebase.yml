@@ -20,6 +20,8 @@ jobs:
         with:
           name: dist
           path: dist
+        env:
+          APIPAYPAL: ${{secrets.APIPAYPAL}}
   deploy:
     name: Deploy
     needs: build
@@ -38,4 +40,3 @@ jobs:
           args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          APIPAYPAL: ${{secrets.APIPAYPAL}}
