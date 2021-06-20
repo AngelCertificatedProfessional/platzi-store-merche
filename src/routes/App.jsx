@@ -12,7 +12,13 @@ import useInitialState from '../hooks/useInitialState';
 
 const App = () => {
   const initialState = useInitialState();
+
+  // const isEmpty = Object.keys(initial.state).length;
+
   return (
+
+    <>
+    {/* {isEmpty > 0 ? ( */}
     <AppConText.Provider value={initialState}>
       <BrowserRouter>
         <Layout>
@@ -27,6 +33,8 @@ const App = () => {
         </Layout>
       </BrowserRouter>
     </AppConText.Provider>
+    {/* ) : <h1> Cargando</h1>} */}
+    </>
   );
 };
 

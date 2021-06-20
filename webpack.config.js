@@ -49,7 +49,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
     }),
-    //new DotEnv(),
+    new DotEnv(),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
